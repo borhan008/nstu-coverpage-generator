@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="google-adsense-account" content="ca-pub-8489552211336972">
+    <title>Bangla Cover Page | NSTU</title>
+  </head>
+  <body>
+    <header
+    class="noprint mb-5 w-full mx-auto p-5 border flex justify-between flex-col gap-5 md:flex-row items-center"
+  >
+    <a href="index.html" class="flex items-center">
+      <img class="w-16" src="assets/images/logo.png" alt="" />
+      <div class="sm:ml-5 ml-2">
+        <h2 class="text-xl sm:text-2xl font-semibold text-blue-900">
+          Noakhali Science & Technology University
+        </h2>
+        <p class="text-gray-900">
+          NSTU Assignment Cover, Lab Cover, Index Generator
+        </p>
+      </div>
+    </a>
+    <ul class="flex">
+      <li class="mr-6">
+        <a class="text-gray-900 hover:text-blue-900" href="index.html"
+          >Home</a
+        >
+      </li>
+      <li class="mr-6">
+        <a class="text-gray-900 hover:text-blue-900" href="guidline.html"
+          >Guideline</a
+        >
+      </li>
+      <li class="mr-6">
+        <a
+          class="text-gray-900 hover:text-blue-900"
+          href="user-details.html"
+          >Your Details</a
+        >
+      </li>
+      <li class="mr-6">
+        <a
+          class="text-gray-900 hover:text-blue-900"
+          href="contributors.html"
+          >Contributors</a
+        >
+      </li>
+    </ul>
+  </header>
+    <section
+      id="page"
+      class="p-5 border border-2 border-blue-900 mx-auto flex flex-col justify-between"
+    >
+      <div class="text-center mx-auto w-full" style="align-self: flex-start">
+        <img
+          src="assets/images/logo.png"
+          alt=""
+          class="w-16 text-center mx-auto"
+        />
+        <h2 class="text-3xl mt-2 text-blue-900">
+          নোয়াখালী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়
+        </h2>
+      </div>
+
+      <div>
+        <textarea
+          class="w-full text-2xl text-blue-800"
+          rows="1"
+          id="normal"
+        >শিরোনাম: </textarea
+        >
+        <textarea
+          class="w-full text-2xl text-blue-800"
+          rows="1"
+          id="normal"
+        >কোর্স কোড :</textarea
+        >
+      </div>
+
+      <div class="flex border border-2 border-blue-900">
+        <div class="p-5 border-r-2 border-blue-900 flex-1">
+          <textarea
+            class="w-full text-xl uppercase text-blue-900 font-semibold"
+            rows="1"
+          >তত্ত্বাবধায়ক:</textarea
+          >
+         <div class="relative"> <textarea
+            class="w-full text-xl "
+            id="teacher-name"
+            rows="1"
+          >Teacher Name</textarea
+          ></div>
+          <div class="relative"><textarea class="w-full text-md"  id="teacher-role" rows="1">
+Professor</textarea
+          ></div>
+          <div class="relative"> <textarea id="dept-name" class="w-full text-md"  rows="1">ডিপার্টমেন্ট</textarea
+          ></div>
+        </div>
+        <div class="p-5 flex-1">
+          <textarea
+          class="w-full text-xl uppercase text-blue-900 font-semibold"
+          rows="1"
+        >উপস্থাপনায়:</textarea
+        >
+          <textarea
+            class="w-full text-xl "
+            oninput="autoheight(this)"
+            rows="1"
+            id="student-name"
+          >
+Student Name</textarea
+          >
+          <textarea class="w-full text-md"  rows="1" id="student-roll">
+রোল:</textarea
+          >
+          <textarea class="w-full text-md"  rows="1" id="student-year-term">
+বর্ষ:০১ টার্ম:০১</textarea
+          >
+          <div class="relative"> <textarea id="dept-name2" class="w-full text-md"  rows="1">ডিপার্টমেন্ট</textarea></div>
+        </div>
+      </div>
+      <div>
+        <textarea
+          class="w-full text-2xl text-center text-blue-900"
+          
+          rows="1"
+        >তারিখ: ১০/১০/২৩</textarea
+        >
+      </div>
+    </section>
+    <div class="w-full mx-auto text-center my-5">
+    <button
+      class="noprint bg-blue-900 text-white py-2 px-5 text-semibold rounded-lg"
+      onclick="print()"
+    >
+      Print/PDF
+    </button>
+    <footer class="noprint w-full text-left my-5">
+      <hr />
+      <p class="px-4 block">
+        By
+        <a
+          class="text-blue-900 font-semibold"
+          href="https://facebook.com/borhan008"
+          >Borhan</a
+        >
+        <small></small>
+      </p>
+    </footer>
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>

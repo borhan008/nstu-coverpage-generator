@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="google-adsense-account" content="ca-pub-8489552211336972" />
+    <title>User Details | NSTU Cover Page Generator</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen justify-between">
+      <header
+        class="mb-5 w-full mx-auto p-5 border flex justify-between flex-col gap-5 md:flex-row items-center"
+      >
+        <a href="index.html" class="flex items-center">
+          <img class="w-16" src="assets/images/logo.png" alt="" />
+          <div class="sm:ml-5 ml-2">
+            <h2 class="text-xl sm:text-2xl font-semibold text-blue-900">
+              Noakhali Science & Technology University
+            </h2>
+            <p class="text-gray-900">
+              NSTU Assignment Cover, Lab Cover, Index Generator
+            </p>
+          </div>
+        </a>
+        <ul class="flex">
+          <li class="mr-6">
+            <a class="text-gray-900 hover:text-blue-900" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="mr-6">
+            <a class="text-gray-900 hover:text-blue-900" href="guidline.html"
+              >Guideline</a
+            >
+          </li>
+          <li class="mr-6">
+            <a
+              class="text-blue-900 hover:text-blue-900"
+              href="user-details.html"
+              >Your Details</a
+            >
+          </li>
+          <li class="mr-6">
+            <a
+              class="text-gray-900 hover:text-blue-900"
+              href="contributors.html"
+              >Contributors</a
+            >
+          </li>
+        </ul>
+      </header>
+      <section class="p-5 w-full max-w-md mx-auto">
+        <h2 class="text-2xl text-center">Student/Your Details</h2>
+        <p class="text-center mb-2">
+          It will be automatically replaced in your student details.
+        </p>
+        <div class="flex flex-col">
+          <label for="name" class="text-blue-900 font-semibold">Name</label>
+          <input
+            type="text"
+            id="name"
+            class="border border-blue-900 p-2 rounded-lg"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="id" class="text-blue-900 font-semibold">ID</label>
+          <input
+            type="text"
+            id="id"
+            class="border border-blue-900 p-2 rounded-lg"
+            placeholder="Enter your ID"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="dept" class="text-blue-900 font-semibold" id="dept-name"
+            >Department</label
+          >
+          <input
+            type="text"
+            id="dept"
+            class="border border-blue-900 p-2 rounded-lg"
+            placeholder="Enter your department"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="session" class="text-blue-900 font-semibold"
+            >Session</label
+          >
+          <input
+            type="text"
+            id="session"
+            class="border border-blue-900 p-2 rounded-lg"
+            placeholder="Enter your session"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="semester" class="text-blue-900 font-semibold">Year</label>
+          <input
+            type="text"
+            id="year"
+            class="border border-blue-900 p-2 rounded-lg"
+            placeholder="Enter your Year"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="term" class="text-blue-900 font-semibold">Term</label>
+          <input
+            type="text"
+            id="term"
+            class="border border-blue-900 p-2 rounded-lg"
+            placeholder="Enter your term"
+          />
+        </div>
+        <button
+          class="bg-blue-900 text-white p-2 rounded-lg mt-4 float-right"
+          onclick="saveDetails()"
+        >
+          Save Your Details
+        </button>
+      </section>
+
+      <footer class="w-full p-2">
+        <hr />
+        <p class="px-4 block">
+          By
+          <a
+            class="text-blue-900 font-semibold"
+            href="https://facebook.com/borhan008"
+            >Borhan</a
+          >
+          <small></small>
+        </p>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("name").value = localStorage.getItem("name");
+      document.getElementById("id").value = localStorage.getItem("id");
+      document.getElementById("dept").value = localStorage.getItem("dept");
+      document.getElementById("session").value =
+        localStorage.getItem("session");
+      document.getElementById("year").value = localStorage.getItem("year");
+      document.getElementById("term").value = localStorage.getItem("term");
+
+      function saveDetails() {
+        const name = document.getElementById("name").value;
+        const id = document.getElementById("id").value;
+        const dept = document.getElementById("dept").value;
+        const session = document.getElementById("session").value;
+        const Year = document.getElementById("year").value;
+        const term = document.getElementById("term").value;
+        localStorage.setItem("name", name);
+        localStorage.setItem("id", id);
+        localStorage.setItem("dept", dept);
+        localStorage.setItem("session", session);
+        localStorage.setItem("year", Year);
+        localStorage.setItem("term", term);
+
+        alert("Your details saved successfully.");
+      }
+    </script>
+  </body>
+</html>

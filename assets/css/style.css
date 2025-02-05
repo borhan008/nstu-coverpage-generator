@@ -1,0 +1,88 @@
+* {
+  -webkit-print-color-adjust: exact !important;  
+  color-adjust: exact !important;                 
+  print-color-adjust: exact !important;         
+}
+td, table, th, tr{
+  border: 1px solid #333;
+  padding: 3px;
+}
+th{
+  background-color: #ddd;
+}
+textarea {
+    resize: none !important;
+    overflow-y: hidden;
+    background: transparent;
+}
+textarea:focus{
+   border:none;
+}
+#page{
+    min-height: 800px;
+    background: url(../images/logo2.png) no-repeat center center;
+}
+/*the container must be positioned relative:*/
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+    background-color: #fff;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }
+
+.indexgen-page{
+  width: 205mm;
+  max-height: max-content !important;
+}  
+#page{
+  width: 205mm;
+  height: 289mm;
+}
+@media print
+{ 
+    @page {
+        size: A4 potrait;
+        margin: 0%;
+    }    
+  
+    html, body {
+        width: 210mm;
+        height: 295mm;
+        padding-top: 5px;
+      }
+    .noprint, .noprint *
+    {
+        display: none !important;
+    }
+
+    .indexgen-page{
+      max-height: 100vh !important;
+    }
+ 
+}

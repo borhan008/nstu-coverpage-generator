@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="google-adsense-account" content="ca-pub-8489552211336972" />
+    <title>NSTU Cover Page | User-Styling V2</title>
+  </head>
+  <body>
+    <header
+      class="noprint mb-5 w-full mx-auto p-5 border flex justify-between flex-col gap-5 md:flex-row items-center"
+    >
+      <a href="index.html" class="flex items-center">
+        <img class="w-16" src="assets/images/logo.png" alt="" />
+        <div class="sm:ml-5 ml-2">
+          <h2 class="text-xl sm:text-2xl font-semibold text-blue-900">
+            Noakhali Science & Technology University
+          </h2>
+          <p class="text-gray-900">
+            NSTU Assignment Cover, Lab Cover, Index Generator
+          </p>
+        </div>
+      </a>
+      <ul class="flex">
+        <li class="mr-6">
+          <a class="text-gray-900 hover:text-blue-900" href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="mr-6">
+          <a class="text-gray-900 hover:text-blue-900" href="guidline.html"
+            >Guideline</a
+          >
+        </li>
+        <li class="mr-6">
+          <a class="text-gray-900 hover:text-blue-900" href="user-details.html"
+            >Your Details</a
+          >
+        </li>
+        <li class="mr-6">
+          <a class="text-gray-900 hover:text-blue-900" href="contributors.html"
+            >Contributors</a
+          >
+        </li>
+      </ul>
+    </header>
+    <div id="newHTML"></div>
+    <section
+      id="page"
+      class="p-5 border border-2 border-blue-900 mx-auto flex flex-col justify-between"
+    >
+      <div class="text-center mx-auto w-full" style="align-self: flex-start">
+        <img
+          src="assets/images/logo.png"
+          alt=""
+          class="w-16 text-center mx-auto"
+        />
+        <textarea
+          oninput="autoheight(this)"
+          class="w-full text-3xl mt-2 text-blue-900"
+          id="normal"
+        >
+          Noakhali Science & Technology University</textarea
+        >
+      </div>
+
+      <div>
+        <div class="mb-3">
+          <textarea
+            oninput="autoheight(this)"
+            class="w-full text-2xl text-blue-800 text-center"
+            rows="1"
+            id="normal"
+          >
+Assignment Title:</textarea
+          >
+          <textarea
+            oninput="autoheight(this)"
+            class="w-full text-2xl text-black-800 text-center"
+            text-center
+            rows="1"
+            id="normal"
+          >
+Write your title on another line here. You can remove this too.</textarea
+          >
+        </div>
+        <div class="mb-3">
+          <textarea
+            oninput="autoheight(this)"
+            class="w-full text-2xl text-blue-800 text-center"
+            rows="1"
+          >
+Course Code:</textarea
+          >
+        </div>
+      </div>
+
+      <div class="flex border border-2 border-blue-900">
+        <div class="p-5 border-r-2 border-blue-900 flex-1">
+          <div class="">
+            <textarea
+              class="w-full text-xl uppercase text-blue-900 mb-2 font-semibold"
+              rows="1"
+            >
+Submitted to:</textarea
+            >
+          </div>
+          <div class="relative">
+            <textarea
+              oninput="autoheight(this)"
+              class="w-full text-xl"
+              id="teacher-name"
+              rows="1"
+            >
+Teacher Name</textarea
+            >
+          </div>
+          <div class="relative">
+            <textarea
+              oninput="autoheight(this)"
+              class="w-full text-md"
+              id="teacher-role"
+              rows="1"
+            >
+Professor</textarea
+            >
+          </div>
+          <div class="relative">
+            <textarea
+              oninput="autoheight(this)"
+              id="dept-name"
+              class="w-full text-md"
+              rows="1"
+            >
+Department</textarea
+            >
+          </div>
+        </div>
+        <div class="p-5 flex-1">
+          <div class="">
+            <textarea
+              class="w-full text-xl uppercase text-blue-900 mb-2 font-semibold"
+              rows="1"
+            >
+Submitted By:</textarea
+            >
+          </div>
+          <div class="relative">
+            <textarea
+              class="w-full text-xl"
+              oninput="autoheight(this)"
+              rows="1"
+              id="student-name"
+            >
+Student Name</textarea
+            >
+          </div>
+          <div class="relative">
+            <textarea
+              oninput="autoheight(this)"
+              class="w-full text-md"
+              rows="1"
+              id="student-roll"
+            >
+Roll:</textarea
+            >
+          </div>
+          <div class="relative">
+            <textarea
+              oninput="autoheight(this)"
+              class="w-full text-md"
+              rows="1"
+              id="student-year-term"
+            >
+Year:01  Term:01</textarea
+            >
+          </div>
+
+          <div class="relative">
+            <textarea
+              oninput="autoheight(this)"
+              id="dept-name2"
+              class="w-full text-md"
+              rows="1"
+            >
+Department</textarea
+            >
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <textarea
+          class="w-full text-2xl text-center text-blue-900"
+          id="dateField"
+          rows="1"
+        >
+Date: </textarea
+        >
+      </div>
+    </section>
+    <div class="w-full mx-auto text-center my-5">
+      <button
+        class="noprint bg-blue-900 text-white py-2 px-5 text-semibold rounded-lg"
+        onclick="printPage()"
+      >
+        Print/PDF
+      </button>
+    </div>
+    <footer class="noprint w-full text-left my-5">
+      <hr />
+      <p class="px-4 block">
+        By
+        <a
+          class="text-blue-900 font-semibold"
+          href="https://facebook.com/borhan008"
+          >Borhan</a
+        >
+        <small></small>
+      </p>
+    </footer>
+    <script src="assets/script/script.js"></script>
+    <script>
+      function rgbToHex(rgb) {
+        let result = rgb.match(/\d+/g);
+        return `#${(
+          (1 << 24) |
+          (parseInt(result[0]) << 16) |
+          (parseInt(result[1]) << 8) |
+          parseInt(result[2])
+        )
+          .toString(16)
+          .slice(1)
+          .toUpperCase()}`;
+      }
+
+      function rgbaToHex(rgba) {
+        let result = rgba.match(/\d+/g);
+        return rgbToHex(`rgb(${result[0]}, ${result[1]}, ${result[2]})`);
+      }
+      document.querySelectorAll("textarea").forEach(function (textarea) {
+        textarea.addEventListener("click", function () {
+          const computedStyle = window.getComputedStyle(this);
+          const textFontSize = parseInt(computedStyle.fontSize);
+          let textColor = computedStyle.color;
+
+          if (textColor.startsWith("rgb")) {
+            textColor = rgbToHex(textColor);
+          } else if (textColor.startsWith("rgba")) {
+            textColor = rgbaToHex(textColor);
+          }
+          console.log(textColor);
+          const txtArea = this;
+
+          // Create a new HTML div and append it to the textarea's parent
+          const newHTMLDiv = document.createElement("div");
+          newHTMLDiv.classList.add(
+            "absolute",
+            "bg-white",
+            "p-4",
+            "border",
+            "rounded-lg",
+            "flex",
+            "noprint"
+          );
+          newHTMLDiv.style.zIndex = 9;
+
+          newHTMLDiv.innerHTML = ` 
+            <button 
+              class="hover:bg-gray-200 p-1 cursor-pointer"
+              onclick="changeTextAlign('left', this)">
+              <svg class="h-5 w-5 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="17" y1="10" x2="3" y2="10" />  <line x1="21" y1="6" x2="3" y2="6" />  <line x1="21" y1="14" x2="3" y2="14" />  <line x1="17" y1="18" x2="3" y2="18" /></svg>
+            </button>
+            <button 
+              class="hover:bg-gray-200 p-1 cursor-pointer"
+              onclick="changeTextAlign('center', this)">
+              <svg class="h-5 w-5 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="18" y1="10" x2="6" y2="10" />  <line x1="21" y1="6" x2="3" y2="6" />  <line x1="21" y1="14" x2="3" y2="14" />  <line x1="18" y1="18" x2="6" y2="18" /></svg>
+            </button>
+            <button
+              class="hover:bg-gray-200 p-1 cursor-pointer"
+                onclick="changeTextAlign('right', this)">
+              <svg class="h-5 w-5 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="21" y1="10" x2="7" y2="10" />  <line x1="21" y1="6" x2="3" y2="6" />  <line x1="21" y1="14" x2="3" y2="14" />  <line x1="21" y1="18" x2="7" y2="18" /></svg>
+            </button>
+
+            <button
+              class="hover:bg-gray-200 p-1 cursor-pointer"
+              onclick="changFontWeight()"
+                >
+                <svg class="h-5 w-5 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 5h6a3.5 3.5 0 0 1 0 7h-6z" />  <path d="M13 12h1a3.5 3.5 0 0 1 0 7h-7v-7" /></svg>
+            </button>
+
+            <div class="flex mr-2 ml-2">
+              <input class="border" type="number" value="${textFontSize}" 
+              oninput="changeFontSize(this.value)"
+              max="100"
+              min="12"
+              /> px
+            </div>
+
+            <div>
+              <input type="color" value="${textColor}" oninput="changecolor(this.value)"/>
+            </div>
+          `;
+
+          // Append new HTML below the clicked textarea
+          this.parentNode.appendChild(newHTMLDiv);
+
+          // Add click listener outside the textarea to remove the controls
+          function outsideClickListener(event) {
+            if (
+              !txtArea.contains(event.target) &&
+              !newHTMLDiv.contains(event.target)
+            ) {
+              newHTMLDiv.remove();
+              document.removeEventListener("click", outsideClickListener);
+            }
+          }
+
+          document.addEventListener("click", outsideClickListener);
+
+          window.changeTextAlign = function (alignment, button) {
+            textarea.style.textAlign = alignment;
+          };
+          window.changeFontSize = function (fontSize) {
+            fontSize = parseInt(fontSize);
+            fontSize = Math.max(12, fontSize);
+            fontSize = Math.min(40, fontSize);
+            textarea.style.fontSize = `${fontSize}px`;
+            autoheight(textarea);
+          };
+
+          window.changecolor = function (color) {
+            textarea.style.color = color;
+          };
+
+          window.changFontWeight = function () {
+            if (textarea.style.fontWeight == "normal") {
+              textarea.style.fontWeight = 600;
+            } else {
+              textarea.style.fontWeight = "normal";
+            }
+          };
+        });
+      });
+
+      function autoheight(textarea) {
+        textarea.style.height = "auto";
+        textarea.style.height = textarea.scrollHeight + "px";
+      }
+
+      printPage = () => {
+        window.print();
+      };
+    </script>
+  </body>
+</html>

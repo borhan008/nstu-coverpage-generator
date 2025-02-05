@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="google-adsense-account" content="ca-pub-8489552211336972" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>NSTU Index Page Generator</title>
+  </head>
+  <body>
+    <header
+      class="noprint mb-5 w-full mx-auto p-5 border flex justify-between flex-col gap-5 md:flex-row items-center"
+    >
+      <a href="index.html" class="flex items-center">
+        <img class="w-16" src="assets/images/logo.png" alt="" />
+        <div class="sm:ml-5 ml-2">
+          <h2 class="text-xl sm:text-2xl font-semibold text-blue-900">
+            Noakhali Science & Technology University
+          </h2>
+          <p class="text-gray-900">
+            NSTU Assignment Cover, Lab Cover, Index Generator
+          </p>
+        </div>
+      </a>
+      <ul class="flex">
+        <li class="mr-6">
+          <a class="text-gray-900 hover:text-blue-900" href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="mr-6">
+          <a class="text-gray-900 hover:text-blue-900" href="guidline.html"
+            >Guideline</a
+          >
+        </li>
+        <li class="mr-6">
+          <a class="text-gray-900 hover:text-blue-900" href="user-details.html"
+            >Your Details</a
+          >
+        </li>
+        <li class="mr-6">
+          <a class="text-gray-900 hover:text-blue-900" href="contributors.html"
+            >Contributors</a
+          >
+        </li>
+      </ul>
+    </header>
+    <section
+      id="page"
+      class="indexgen-page p-2 mx-auto flex flex-col justify-center"
+      style="background-image: none; min-height: auto"
+    >
+      <table class="border border-1 border-gray-900">
+        <thead>
+          <tr>
+            <th class="w-16 text-center">
+              <textarea
+                class="normal w-full text-center font-semibold"
+                rows="1"
+              >
+No.</textarea
+              >
+            </th>
+            <th>
+              <textarea
+                class="normal w-full text-center font-semibold"
+                rows="1"
+              >
+Experiment Name</textarea
+              >
+            </th>
+            <th class="w-32 border-r-0">
+              <textarea
+                class="normal w-full text-center font-semibold"
+                rows="1"
+              >
+Page</textarea
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr class="relative">
+            <td class="w-16 text-center">
+              <textarea class="w-full text-center" rows="1">01</textarea>
+            </td>
+            <td>
+              <textarea class="w-full" rows="1" oninput="autoheight(this)">
+Experiment Title 01</textarea
+              >
+            </td>
+            <td class="w-32 border-r-0">
+              <textarea class="w-full text-center" rows="1">01-05</textarea>
+            </td>
+            <td class="noprint absolute border-0 right-0">
+              <button onclick="remove(this)" class="noprint">X</button>
+            </td>
+          </tr>
+          <tr class="relative">
+            <td class="w-16 text-center">
+              <textarea class="w-full text-center" rows="1">01</textarea>
+            </td>
+            <td>
+              <textarea class="w-full" rows="1" oninput="autoheight(this)">
+Experiment Title 01</textarea
+              >
+            </td>
+            <td class="w-32 border-r-0">
+              <textarea class="w-full text-center" rows="1">01-05</textarea>
+            </td>
+            <td class="noprint absolute border-0 right-0">
+              <button onclick="remove(this)" class="noprint">X</button>
+            </td>
+          </tr>
+          <tr class="relative">
+            <td class="w-16 text-center">
+              <textarea class="w-full text-center" rows="1">01</textarea>
+            </td>
+            <td>
+              <textarea class="w-full" rows="1" oninput="autoheight(this)">
+Experiment Title 01</textarea
+              >
+            </td>
+            <td class="w-32 border-r-0">
+              <textarea class="w-full text-center" rows="1">01-05</textarea>
+            </td>
+            <td class="noprint absolute border-0 right-0">
+              <button onclick="remove(this)" class="noprint">X</button>
+            </td>
+          </tr>
+          <tr class="relative">
+            <td class="w-16 text-center">
+              <textarea class="w-full text-center" rows="1">01</textarea>
+            </td>
+            <td>
+              <textarea class="w-full" rows="1" oninput="autoheight(this)">
+Experiment Title 01</textarea
+              >
+            </td>
+            <td class="w-32 border-r-0">
+              <textarea class="w-full text-center" rows="1">01-05</textarea>
+            </td>
+            <td class="noprint absolute border-0 right-0">
+              <button onclick="remove(this)" class="noprint">X</button>
+            </td>
+          </tr>
+          <tr class="relative">
+            <td class="w-16 text-center">
+              <textarea class="w-full text-center" rows="1">01</textarea>
+            </td>
+            <td>
+              <textarea class="w-full" rows="1" oninput="autoheight(this)">
+Experiment Title 01</textarea
+              >
+            </td>
+            <td class="w-32 border-r-0">
+              <textarea class="w-full text-center" rows="1">01-05</textarea>
+            </td>
+            <td class="noprint absolute border-0 right-0">
+              <button onclick="remove(this)" class="noprint">X</button>
+            </td>
+          </tr>
+          <tr class="relative">
+            <td class="w-16 text-center">
+              <textarea class="w-full text-center" rows="1">01</textarea>
+            </td>
+            <td>
+              <textarea class="w-full" rows="1" oninput="autoheight(this)">
+Experiment Title 01</textarea
+              >
+            </td>
+            <td class="w-32 border-r-0">
+              <textarea class="w-full text-center" rows="1">01-05</textarea>
+            </td>
+            <td class="noprint absolute border-0 right-0">
+              <button onclick="remove(this)" class="noprint">X</button>
+            </td>
+          </tr>
+          <tr class="relative">
+            <td class="w-16 text-center">
+              <textarea class="w-full text-center" rows="1">01</textarea>
+            </td>
+            <td>
+              <textarea class="w-full" rows="1" oninput="autoheight(this)">
+Experiment Title 01</textarea
+              >
+            </td>
+            <td class="w-32 border-r-0">
+              <textarea class="w-full text-center" rows="1">01-05</textarea>
+            </td>
+            <td class="noprint absolute border-0 right-0">
+              <button onclick="remove(this)" class="noprint">X</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <div class="w-full mx-auto text-center my-5">
+      <button
+        class="noprint bg-blue-900 text-white py-2 px-5 text-semibold rounded-lg"
+        onclick="addRow()"
+      >
+        Add Row
+      </button>
+      <button
+        class="noprint bg-blue-900 text-white py-2 px-5 text-semibold rounded-lg"
+        onclick="print()"
+      >
+        Print/PDF
+      </button>
+      <footer class="noprint w-full text-left my-5">
+        <hr />
+        <p class="px-4 block">
+          By
+          <a
+            class="text-blue-900 font-semibold"
+            href="https://facebook.com/borhan008"
+            >Borhan</a
+          >
+          <small></small>
+        </p>
+      </footer>
+    </div>
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
