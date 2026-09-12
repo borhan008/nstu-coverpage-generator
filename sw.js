@@ -17,6 +17,7 @@ const ASSETS_TO_CACHE = [
   "/manifest.json",
 
   "/assets/css/style.css",
+  "/assets/css/tailwind.css",
   "/assets/script/script.js",
 
   "/assets/images/guideline-1.png",
