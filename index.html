@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="manifest.json" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <meta name="google-adsense-account" content="ca-pub-8489552211336972" />
+    <script src="assets/css/tailwind.css"></script>
+    
     
     <title>NSTU Cover Page Generator</title>
 
@@ -15,6 +15,9 @@
       <header
         class="mb-5 w-full mx-auto p-5 border flex justify-between flex-col gap-5 md:flex-row items-center"
       >
+        <div id="offline-indicator" class="hidden fixed top-0 left-0 right-0 bg-red-500 text-white text-center py-2 z-50">
+          📡 You are offline - using cached content
+        </div>
         <a href="index.html" class="flex items-center">
           <img class="w-16" src="assets/images/logo.png" alt="" />
           <div class="sm:ml-5 ml-2">
@@ -130,18 +133,30 @@
     <script>
       let deferredPrompt;
 
+      // Offline/Online indicator
+      function updateOnlineStatus() {
+        const offlineIndicator = document.getElementById('offline-indicator');
+        if (!navigator.onLine) {
+          if (offlineIndicator) offlineIndicator.style.display = 'block';
+          console.log('App is offline - using cached content');
+        } else {
+          if (offlineIndicator) offlineIndicator.style.display = 'none';
+          console.log('App is online');
+        }
+      }
+
+      window.addEventListener('online', updateOnlineStatus);
+      window.addEventListener('offline', updateOnlineStatus);
+
       // Listen for the beforeinstallprompt event
       window.addEventListener('beforeinstallprompt', (e) => {
-        // Prevent the mini-infobar from appearing
         e.preventDefault();
-        // Stash the event for later use
         deferredPrompt = e;
-        // Show install button
         const installBtn = document.getElementById('install-btn');
         if (installBtn) {
           installBtn.style.display = 'block';
         }
-        console.log('Install  ready');
+        console.log('Install prompt ready');
       });
 
       // Handle install button click
@@ -152,7 +167,7 @@
             deferredPrompt.prompt();
             const { outcome } = await deferredPrompt.userChoice;
             if (outcome === 'accepted') {
-              console.log('App installed');
+              console.log('App installed successfully');
             } else {
               console.log('App installation rejected');
             }
@@ -163,17 +178,26 @@
       }
 
       // Register Service Worker
-      if('serviceWorker' in navigator){
-        navigator.serviceWorker.register('assets/script/service.js')
-        .then(registration => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(error => {
-          console.log('Service Worker registration failed:', error);
-        });
-      } else{
-        console.log('Service Workers are not supported in this browser.');
-      }
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/sw.js")
+              .then(registration => {
+                console.log(
+                  "Service Worker registered:",
+                  registration.scope
+                );
+              })
+              .catch(error => {
+                console.error(
+                  "Service Worker registration failed:",
+                  error
+                );
+              });
+          });
+        }
+
+      // Check online status on load
+      updateOnlineStatus();
     </script>
     
   </body>

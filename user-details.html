@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <meta name="google-adsense-account" content="ca-pub-8489552211336972" />
+    <script src="assets/css/tailwind.css"></script>
+    <link rel="manifest" href="/manifest.json">
+    
     <title>User Details | NSTU Cover Page Generator</title>
   </head>
   <body>
@@ -153,6 +154,27 @@
 
         alert("Your details saved successfully.");
       }
+    </script>
+
+    <script>
+      // Register Service Worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .then(registration => {
+        console.log(
+          "Service Worker registered:",
+          registration.scope
+        );
+      })
+      .catch(error => {
+        console.error(
+          "Service Worker registration failed:",
+          error
+        );
+      });
+  });
+}
     </script>
   </body>
 </html>
