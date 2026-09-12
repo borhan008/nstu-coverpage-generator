@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="google-adsense-account" content="ca-pub-8489552211336972" />
+    
     <title>NSTU Cover Page Generator</title>
+
   </head>
   <body>
     <div class="flex flex-col h-screen justify-between">
@@ -23,32 +26,44 @@
             </p>
           </div>
         </a>
-        <ul class="flex">
-          <li class="mr-6">
-            <a class="text-blue-900 hover:text-blue-900" href="index.html"
-              >Home</a
-            >
-          </li>
-          <li class="mr-6">
-            <a class="text-gray-900 hover:text-blue-900" href="guidline.html"
-              >Guideline</a
-            >
-          </li>
-          <li class="mr-6">
-            <a
-              class="text-gray-900 hover:text-blue-900"
-              href="user-details.html"
-              >Your Details</a
-            >
-          </li>
-          <li class="mr-6">
-            <a
-              class="text-gray-900 hover:text-blue-900"
-              href="contributors.html"
-              >Contributors</a
-            >
-          </li>
-        </ul>
+        <div>
+             <button
+            id="install-btn"
+            class="hidden px-4 mb-2 py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition-colors"
+          >
+            Install For Offline Use
+          </button>
+        
+            <div class="flex items-center gap-4">
+       
+          <ul class="flex">
+            <li class="mr-6">
+              <a class="text-blue-900 hover:text-blue-900" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="mr-6">
+              <a class="text-gray-900 hover:text-blue-900" href="guidline.html"
+                >Guideline</a
+              >
+            </li>
+            <li class="mr-6">
+              <a
+                class="text-gray-900 hover:text-blue-900"
+                href="user-details.html"
+                >Your Details</a
+              >
+            </li>
+            <li class="mr-6">
+              <a
+                class="text-gray-900 hover:text-blue-900"
+                href="contributors.html"
+                >Contributors</a
+              >
+            </li>
+          </ul>
+          </div>
+        </div>
       </header>
       <section
         class="p-5 w-full max-w-xxl mx-auto gap-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2"
@@ -107,15 +122,59 @@
       <footer class="w-full p-2">
         <hr />
         <p class="px-4 block">
-          By
-          <a
-            class="text-blue-900 font-semibold"
-            href="https://facebook.com/borhan008"
-            >Borhan</a
-          >
-          <small></small>
+          Made by <span class="font-semibold">Borhan</span> · <i>2022–Present</i>
         </p>
       </footer>
     </div>
+
+    <script>
+      let deferredPrompt;
+
+      // Listen for the beforeinstallprompt event
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing
+        e.preventDefault();
+        // Stash the event for later use
+        deferredPrompt = e;
+        // Show install button
+        const installBtn = document.getElementById('install-btn');
+        if (installBtn) {
+          installBtn.style.display = 'block';
+        }
+        console.log('Install  ready');
+      });
+
+      // Handle install button click
+      const installBtn = document.getElementById('install-btn');
+      if (installBtn) {
+        installBtn.addEventListener('click', async () => {
+          if (deferredPrompt) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+              console.log('App installed');
+            } else {
+              console.log('App installation rejected');
+            }
+            deferredPrompt = null;
+            installBtn.style.display = 'none';
+          }
+        });
+      }
+
+      // Register Service Worker
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('assets/script/service.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          console.log('Service Worker registration failed:', error);
+        });
+      } else{
+        console.log('Service Workers are not supported in this browser.');
+      }
+    </script>
+    
   </body>
 </html>

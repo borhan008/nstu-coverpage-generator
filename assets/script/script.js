@@ -111,6 +111,7 @@ var dept = [
   "Education",
   "Educational Administration",
   "Law",
+  "Political Science",
 ];
 function autocomplete(inp, arr) {
   var currentFocus;
@@ -292,4 +293,16 @@ if (studentYearTermElement) {
 if (document.getElementById("dept-name2")) {
   document.getElementById("dept-name2").value =
     localStorage.getItem("dept") || "Department";
+}
+
+
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service.js')
+  .then(function(registration) {
+    console.log('Service Worker registered with scope:', registration.scope);
+  })
+  .catch(function(error) {
+    console.log('Service Worker registration failed:', error);
+  });
 }
