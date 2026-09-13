@@ -1,4 +1,4 @@
-const CACHE_NAME = "nstu-coverpage-v2";
+const CACHE_NAME = "nstu-coverpage-v3-0";
 
 const ASSETS_TO_CACHE = [
   "/",
